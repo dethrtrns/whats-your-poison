@@ -1,8 +1,9 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
 
 // import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { MantineProvider } from '@mantine/core';
+import Head from "next/head";
+import { MantineProvider } from "@mantine/core";
+import Layout from "@/components/layout/Layout";
 
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -11,7 +12,10 @@ export default function App(props) {
     <>
       <Head>
         <title>What's Your Poison?</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta
+          name='viewport'
+          content='minimum-scale=1, initial-scale=1, width=device-width'
+        />
       </Head>
 
       <MantineProvider
@@ -19,10 +23,12 @@ export default function App(props) {
         withNormalizeCSS
         theme={{
           /** Put your mantine theme override here */
-          colorScheme: 'light',
+          colorScheme: "light",
         }}
       >
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </MantineProvider>
     </>
   );
