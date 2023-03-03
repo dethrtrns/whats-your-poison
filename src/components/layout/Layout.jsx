@@ -18,9 +18,10 @@ export default function Layout({ children }) {
   return (
     <AppShell
       padding='md'
+      fixed={false}
       //   navbar={<Navbar width={{ base: 300 }} height={500} p="xs">{/* Navbar content */}</Navbar>}
       header={
-        <Header height={260}>
+        <Header height={"20vh"}>
           <BackgroundImage
             sx={{
               display: "flex",
