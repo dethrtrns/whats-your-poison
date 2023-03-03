@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       padding='md'
       //   navbar={<Navbar width={{ base: 300 }} height={500} p="xs">{/* Navbar content */}</Navbar>}
       header={
-        <Header height={80}>
+        <Header height={260}>
           <BackgroundImage
             sx={{
               display: "flex",
@@ -33,12 +33,16 @@ export default function Layout({ children }) {
           >
             <Text
               sx={{
-                border: "1px solid",
+                border: "0.5px solid",
                 borderRadius: 5,
                 padding: "2px 5px",
                 boxShadow: 10,
                 zIndex: 5,
-                zoom: 1.5,
+                ":hover": {
+                  // transform: "scale3d(2.5,2.5,-25)",
+                  transform: "rotateX(180deg)",
+                  transformStyle: "preserve-3d",
+                },
               }}
               component='h1'
               ff='cursive'
@@ -76,7 +80,7 @@ export default function Layout({ children }) {
         },
       })}
     >
-      <Container size={"xl"} bg='red'>
+      <Container mt={"-md"} size={"xl"} bg='red'>
         {children}
       </Container>
     </AppShell>
