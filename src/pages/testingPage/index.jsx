@@ -1,7 +1,6 @@
 import ItemCard from "@/components/ItemCard/ItemCard";
-import Layout from "@/components/layout/Layout";
-import { Flex, Button, Text, Code, Divider } from "@mantine/core";
-import { IconScissors } from "@tabler/icons-react";
+import ItemCardMini from "@/components/ItemCardMini/ItemCardMini";
+import { Flex } from "@mantine/core";
 
 
 export default function TestingPage() {
