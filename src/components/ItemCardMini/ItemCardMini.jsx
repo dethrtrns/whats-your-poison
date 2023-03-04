@@ -1,7 +1,8 @@
+import {} from "@mantine/core";
 
+const useStyles = createStyles((theme) => ({}));
 
 export default function ItemCardMini() {
-  return (
-    <h3>make your card here!</h3>
-  );
+  const { classes } = useStyles();
+  return <h3>make your card here!</h3>;
 }
