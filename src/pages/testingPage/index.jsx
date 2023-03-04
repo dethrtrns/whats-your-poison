@@ -15,7 +15,8 @@ export default function TestingPage() {
       direction='column'
       wrap='wrap'
     >
-      <ItemCard /> 
+      {/* <ItemCard  /> */}
+      <ItemCardMini />
     </Flex>
   );
 }
