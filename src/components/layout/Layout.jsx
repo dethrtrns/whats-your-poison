@@ -13,6 +13,7 @@ import {
   IconGlassFull,
   IconGlassOff,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Layout({ children }) {
   return (
@@ -32,43 +33,45 @@ export default function Layout({ children }) {
             h={"100%"}
             src='/beer-drinks.gif'
           >
-            <Text
-              sx={{
-                border: "0.5px solid",
-                borderRadius: 5,
-                padding: "2px 5px",
-                boxShadow: 10,
-                zIndex: 5,
-                ":hover": {
-                  // transform: "scale3d(2.5,2.5,-25)",
-                  transform: "rotateX(180deg)",
-                  transformStyle: "preserve-3d",
-                },
-              }}
-              component='h1'
-              ff='cursive'
-              variant={"gradient"}
-              gradient={{ from: "red", to: "purple", deg: 135 }}
-              lts={"-3.5"}
-              fz={"xl"}
-              ta={"center"}
-            >
-              What's Your{" "}
+            <Link href={"/"}>
               <Text
-                component='span'
-                transform='uppercase'
-                ff='fantasy'
-                fz={"xl"}
-                fw={100}
+                sx={{
+                  border: "0.5px solid",
+                  borderRadius: 5,
+                  padding: "2px 5px",
+                  boxShadow: 10,
+                  zIndex: 5,
+                  ":hover": {
+                    // transform: "scale3d(2.5,2.5,-25)",
+                    transform: "rotateX(180deg)",
+                    transformStyle: "preserve-3d",
+                  },
+                }}
+                component='h1'
+                ff='cursive'
                 variant={"gradient"}
                 gradient={{ from: "red", to: "purple", deg: 135 }}
-                lts={-1}
+                lts={"-3.5"}
+                fz={"xl"}
+                ta={"center"}
               >
-                <IconGlassFull color='purple' />
-                Poison
-                <IconGlassOff color='maroon' />?
+                What's Your{" "}
+                <Text
+                  component='span'
+                  transform='uppercase'
+                  ff='fantasy'
+                  fz={"xl"}
+                  fw={100}
+                  variant={"gradient"}
+                  gradient={{ from: "red", to: "purple", deg: 135 }}
+                  lts={-1}
+                >
+                  <IconGlassFull color='purple' />
+                  Poison
+                  <IconGlassOff color='maroon' />?
+                </Text>
               </Text>
-            </Text>
+            </Link>
           </BackgroundImage>
         </Header>
       }

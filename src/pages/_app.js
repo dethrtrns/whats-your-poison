@@ -23,6 +23,35 @@ export default function App(props) {
         withGlobalStyles
         withNormalizeCSS
         theme={{
+          globalStyles: (theme) => ({
+            "*, *::before, *::after": {
+              boxSizing: "border-box",
+            },
+
+            body: {
+              ...theme.fn.fontStyles(),
+              backgroundColor:
+                theme.colorScheme === "dark"
+                  ? theme.colors.dark[7]
+                  : theme.white,
+              color:
+                theme.colorScheme === "dark"
+                  ? theme.colors.dark[0]
+                  : theme.black,
+              lineHeight: theme.lineHeight,
+            },
+
+            ".flexCenter": {
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            },
+            ".flexApart": {
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            },
+          }),
           /** Put your mantine theme override here */
           colorScheme: "light",
         }}
