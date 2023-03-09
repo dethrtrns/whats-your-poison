@@ -1,14 +1,14 @@
 const { MongoClient } = require("mongodb");
 
 const uri =
-  "mongodb+srv://alex:rs9415315450@alex.txg9pe3.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://alex:rs9415315450@alex.txg9pe3.mongodb.net/poisonbb?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 let datadb;
 async function run() {
   try {
     await client.connect();
-    const db = client.db("poisonbb");
-    const collection = db.collection("poisons");
+    // const db = client.db();
+    const collection = client.db().collection("poisons");
     console.log("connected");
 
     // Find the first document in the collection
