@@ -31,8 +31,7 @@ export default function Layout({ children }) {
             }}
             w={"100%"}
             h={"100%"}
-            src='/beer-drinks.gif'
-          >
+            src='/beer-drinks.gif'>
             <Link href={"/"}>
               <Text
                 sx={{
@@ -53,8 +52,7 @@ export default function Layout({ children }) {
                 gradient={{ from: "red", to: "purple", deg: 135 }}
                 lts={"-3.5"}
                 fz={"xl"}
-                ta={"center"}
-              >
+                ta={"center"}>
                 What's Your{" "}
                 <Text
                   component='span'
@@ -64,8 +62,7 @@ export default function Layout({ children }) {
                   fw={100}
                   variant={"gradient"}
                   gradient={{ from: "red", to: "purple", deg: 135 }}
-                  lts={-1}
-                >
+                  lts={-1}>
                   <IconGlassFull color='purple' />
                   Poison
                   <IconGlassOff color='maroon' />?
@@ -82,9 +79,13 @@ export default function Layout({ children }) {
               ? theme.colors.dark[8]
               : theme.colors.gray[0],
         },
-      })}
-    >
-      <Container mt={"-md"} size={"xl"} bg='red'>
+      })}>
+      <Container
+        mt={"md"}
+
+        // bg='red'
+        // size={"xl"}
+      >
         {children}
       </Container>
     </AppShell>

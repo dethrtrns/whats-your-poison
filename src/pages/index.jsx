@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { Button, createStyles } from "@mantine/core";
+import { Button, createStyles, SimpleGrid } from "@mantine/core";
 import Link from "next/link";
+import ItemCard from "@/components/ItemCard/ItemCard";
+import ItemCardMini from "@/components/ItemCardMini/ItemCardMini";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,7 +11,7 @@ const useStyles = createStyles((theme) => ({
   root: {
     width: "100%",
     justifyContent: "space-around",
-    backgroundColor: "black",
+    // backgroundColor: "black",
   },
   icon: {},
   iconBox: {},
@@ -37,14 +39,40 @@ export default function Home() {
         />
       </Head>
       <div className={`${classes.root} flexCenter`}>
-        <h1 className={classes.heading}>i'm back!!!</h1>
+        <h1 className={classes.heading}>Welcome!!!</h1>
         <Button
           variant={"gradient"}
           component={Link}
-          href='/testingPage'>
-          Go to testing
+          href='/admin'>
+          Add your Poison
         </Button>
       </div>
+      <SimpleGrid
+        breakpoints={[
+          { minWidth: "xs", cols: 2 },
+          { minWidth: "sm", cols: 3 },
+          { minWidth: "md", cols: 4 },
+        ]}>
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+        <ItemCard />
+      </SimpleGrid>
     </>
   );
 }
